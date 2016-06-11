@@ -22,7 +22,7 @@ GU7000_Serial_Async interface(38400, 2, 3, 4); // BAUD RATE,SIN,BUSY,RESET
 
 class VFD_HANDLER {
 public:
-    BasicSetup() {
+    void BasicSetup() {
         //initialize vfd
         _delay_ms(500);           // wait for device to power up
         Noritake_VFD_GU7000::begin(280, 16);       // 280x16 module
@@ -50,7 +50,7 @@ public:
         Noritake_VFD_GU7000::GU7000_selectWindow(0);
     }
 
-    WriteVFD() {
+    void WriteVFD() {
         char outchar[40] = {"NULL"};
         String(src_n_dec).toCharArray(outchar, String(src_n_dec).length() + 1);
         Noritake_VFD_GU7000::print(outchar);

@@ -7,11 +7,11 @@
 
 class SERIAL_HANDLER {
 public:
-    Setup() {
+    void Setup() {
         Serial.begin(115200);
     }
 
-    Write() {
+    void Write() {
         Serial.println(String(src_n_dec));
         delay(750);
     }

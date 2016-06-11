@@ -10,13 +10,13 @@
 
 class ATRC_LOGO {
 public:
-    logo_VFD() {
+    void logo_VFD() {
         Noritake_VFD_GU7000::GU7000_clearScreen();
         Noritake_VFD_GU7000::println( "         Tokyo Denki University" );
         Noritake_VFD_GU7000::println( "     Audio Technology Research Club" );
     }
 
-    logo_Serial() {
+    void logo_Serial() {
         Serial.println( "" );
         Serial.println( "         Tokyo Denki University" );
         Serial.println( "     Audio Technology Research Club" );
